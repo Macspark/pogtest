@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Погнали</title>
+    <link href="css/style-min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="preload" href="fonts/bloggersans.woff2" as="font">
+    <link rel="preload" href="fonts/bloggersans-bold.woff2" as="font">
+    <link rel="preload" href="fonts/bloggersans-bolditalic.woff2" as="font">
+    <link rel="preload" href="fonts/bloggersans-italic.woff2" as="font">
+    <link rel="preload" href="fonts/bloggersans-light.woff2" as="font">
+    <link rel="preload" href="fonts/bloggersans-lightitalic.woff2" as="font">
+    <link rel="preload" href="fonts/bloggersans-medium.woff2" as="font">
+    <link rel="preload" href="fonts/bloggersans-mediumitalic.woff2" as="font">
+  </head>
+  <body>
+    <header class="page-header page-header--nojs">
+      <div class="page-header__wrapper">
+
+        <a href="index.html" class="page-header__logo-wrapper">
+          <picture class="page-header__logo page-header__logo--white">
+            <source type="image/webp" srcset="./img/logo-desktop-white@1x.webp 1x, ./img/logo-desktop-white@2x.webp 2x" media="(min-width: 1440px)">
+            <source type="image/webp" srcset="./img/logo-tablet-white@1x.webp 1x, ./img/logo-tablet-white@2x.webp 2x" media="(min-width: 768px)">
+            <source type="image/webp" srcset="./img/logo-mobile-white@1x.webp 1x, ./img/logo-mobile-white@2x.webp 2x">
+
+            <source srcset="./img/logo-desktop-white@1x.png 1x, ./img/logo-desktop-white@2x.png 2x" media="(min-width: 1440px)">
+            <source srcset="./img/logo-tablet-white@1x.png 1x, ./img/logo-tablet-white@2x.png 2x" media="(min-width: 768px)">
+            <img src="./img/logo-mobile-white@1x.png" srcset="./img/logo-mobile-white@2x.png 2x" width="100" height="19" alt="Погнали!">
+          </picture>
+          <picture class="page-header__logo page-header__logo--blue">
+            <source type="image/webp" srcset="./img/logo-desktop-blue@1x.webp 1x, ./img/logo-desktop-blue@2x.webp 2x" media="(min-width: 1440px)">
+            <source type="image/webp" srcset="./img/logo-tablet-blue@1x.webp 1x, ./img/logo-tablet-blue@2x.webp 2x" media="(min-width: 768px)">
+            <source type="image/webp" srcset="./img/logo-mobile-blue@1x.webp 1x, ./img/logo-mobile-blue@2x.webp 2x">
+
+            <source srcset="./img/logo-desktop-blue@1x.png 1x, ./img/logo-desktop-blue@2x.png 2x" media="(min-width: 1440px)">
+            <source srcset="./img/logo-tablet-blue@1x.png 1x, ./img/logo-tablet-blue@2x.png 2x" media="(min-width: 768px)">
+            <img src="./img/logo-mobile-blue@1x.png" srcset="./img/logo-mobile-blue@2x.png 2x" width="100" height="19" alt="Погнали!">
+          </picture>
+        </a>
+
+        <button class="page-header__toggle" type="button">Меню</button>
+
+        <ul class="page-header__panel panel">
+          <li class="panel__item panel__item--phone">
+            <a href="tel:88005558628" aria-label="Позвонить нам">
+              <svg width="18" height="18">
+                <use xlink:href="./img/sprite.svg#topmenu-phone"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="panel__item panel__item--mail">
+            <a href="mailto:mail@htmlacademy.ru" aria-label="Написать нам на почту">
+              <svg width="18" height="14">
+                <use xlink:href="./img/sprite.svg#topmenu-mail"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="panel__item panel__item--button">
+            <a href="#">Авторизация</a>
+          </li>
+        </ul>
+      </div>
+
+      <nav class="main-nav">
+
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__menu">
+            <li>
+              <a href="index.html" data-title="О сервисе">О сервисе</a>
+            </li>
+            <li>
+              <a href="form.html" data-title="Направления">Направления</a>
+            </li>
+            <li>
+              <a href="catalog.html" data-title="Попутчики">Попутчики</a>
+            </li>
+          </ul>
+
+          <a href="#" class="button main-nav__button">Авторизация</a>
+
+          <ul class="main-nav__contact">
+            <li class="main-nav__contact-method">
+              <a href="tel:88005558628" aria-label="Позвонить нам">
+                <div class="main-nav__img main-nav__img--phone">
+                  <svg width="18" height="18">
+                    <use xlink:href="./img/sprite.svg#contacts-phone"></use>
+                  </svg>
+                </div>
+                8 800 555-86-28
+              </a>
+            </li>
+            <li class="main-nav__contact-method">
+              <a href="mailto:mail@htmlacademy.ru" aria-label="Написать нам на почту">
+                <div class="main-nav__img main-nav__img--mail">
+                  <svg width="18" height="13">
+                    <use xlink:href="./img/sprite.svg#contacts-mail"></use>
+                  </svg>
+                </div>
+                mail@htmlacademy.ru
+              </a>
+            </li>
+          </ul>
+
+          <ul class="main-nav__social social social--header">
+            <li class="social__item">
+              <a class="social__link" href="https://facebook.com" target="_blank" aria-label="Мы на Фейсбуке">
+                <svg class="social__img social__img--fb" width="11" height="21">
+                  <use xlink:href="./img/sprite.svg#facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="https://vk.com" target="_blank" aria-label="Мы Вконтакте">
+                <svg class="social__img social__img--vk" width="23" height="12">
+                  <use xlink:href="./img/sprite.svg#vk"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="https://instagram.com" target="_blank" aria-label="Мы в Инстаграме">
+                <svg class="social__img social__img--insta" width="18" height="18">
+                  <use xlink:href="./img/sprite.svg#instagram"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+
+        </div>
+      </nav>
+    </header>
+
+    <main class="page-main">
+      <section class="routes-header">
+        <div class="routes-header__wrapper">
+          <h1 class="routes-header__title">Направления</h1>
+        </div>
+      </section>
+
+      <section class="profile">
+        <div class="profile__wrapper">
+          <div class="profile__avatar avatar">
+            <div class="avatar__wrapper">
+              <div class="avatar__level level level--profile">
+                <svg class="level__circle" viewBox="0 0 60 60" width="94" height="94">
+                  <circle cx="30" cy="30" r="29" fill="transparent" stroke="#ff8d30" stroke-width="2" stroke-dasharray="152, 1000"></circle>
+                </svg>
+                <p class="level__number">80</p>
+              </div>
+              <div class="avatar__img">
+                <picture>
+                  <source type="image/webp" srcset="./img/demin-desktop@1x.webp 1x, ./img/demin-desktop@2x.webp 2x" media="(min-width: 1440px)">
+                  <source type="image/webp" srcset="./img/demin-tablet@1x.webp 1x, ./img/demin-tablet@2x.webp 2x" media="(min-width: 768px)">
+                  <source type="image/webp" srcset="./img/demin-tablet@1x.webp 1x, ./img/demin-tablet@2x.webp 2x">
+
+                  <source srcset="./img/demin-desktop@1x.jpg 1x, ./img/demin-desktop@2x.jpg 2x" media="(min-width: 1440px)">
+                  <source srcset="./img/demin-tablet@1x.jpg 1x, ./img/demin-tablet@2x.jpg 2x" media="(min-width: 768px)">
+                  <img src="./img/demin-tablet@1x.jpg" srcset="./img/demin-tablet@2x.jpg 2x" width="99" height="100" alt="Петя Демин">
+                </picture>
+              </div>
+            </div>
+            <a href="#" class="button avatar__button"><span>Сменить </span>фото</a>
+          </div>
+
+          <div class="profile__tags-wrapper">
+            <label class="profile__title" for="my-tags">Тэги</label>
+            <textarea class="profile__tags" id="my-tags" name="my-tags" placeholder="Коротко о себе в виде 5-8 хештэгов">#бургер #бар #футбол #концерт #крафт</textarea>
+          </div>
+
+          <div class="profile__transport-wrapper">
+            <h3 class="profile__title">Транспорт</h3>
+            <ul class="profile__transport transport transport--profile">
+              <li class="transport__item transport__item--toggle transport__item--toggled" data-transport="Авиаперелет">
+                <svg class="transport__img transport__img--plane" width="14" height="16">
+                  <use xlink:href="./img/sprite.svg#plane"></use>
+                </svg>
+              </li>
+              <li class="transport__item transport__item--toggle transport__item--toggled" data-transport="Автотранспорт">
+                <svg class="transport__img transport__img--bus" width="13" height="16">
+                  <use xlink:href="./img/sprite.svg#bus"></use>
+                </svg>
+              </li>
+              <li class="transport__item transport__item--toggle" data-transport="Велосипед">
+                <svg class="transport__img transport__img--bike" width="19" height="17">
+                  <use xlink:href="./img/sprite.svg#bike"></use>
+                </svg>
+              </li>
+              <li class="transport__item transport__item--toggle transport__item--toggled" data-transport="Пешком">
+                <svg class="transport__img transport__img--run" width="15" height="17">
+                  <use xlink:href="./img/sprite.svg#run"></use>
+                </svg>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="plans">
+        <div class="plans__wrapper">
+          <h2 class="plans__title">Мои планы:</h2>
+          <div class="plans__plan plan">
+            <p class="plan__title"><span>1.</span>Франция, Италия</p>
+            <div class="plan__wrapper">
+              <div class="plan__details">
+                <p class="plan__text"><span>3</span> попутчика</p>
+                <p class="plan__text">26 мар - 29 мар</p>
+              </div>
+              <a href="#" class="plan__button">Изменить</a>
+            </div>
+          </div>
+          <div class="plans__plan plan">
+            <p class="plan__title"><span>2.</span>Таиланд, Индонезия</p>
+            <div class="plan__wrapper">
+              <div class="plan__details">
+                <p class="plan__text"><span>1</span> попутчик</p>
+                <p class="plan__text">1 июл - 15 июл</p>
+              </div>
+              <a href="#" class="plan__button">Изменить</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="add-plan">
+        <div class="add-plan__wrapper">
+          <h2 class="add-plan__title add-plan__title--stepone">Добавить план:</h2>
+          <form class="add-plan__form" action="https://echo.htmlacademy.ru" method="post">
+            <fieldset class="add-plan__fieldset fieldset fieldset--stepone" id="stepone">
+              <h2 class="fieldset__title">Шаг 1. <br>Даты пребывания</h2>
+              <p class="fieldset__text">Укажите предпочтительное количество попутчиков, которых <br> вы хотели бы позвать в поездку и ее предполагаемую длительность.</p>
+              <ul class="fieldset__steps">
+                <li class="fieldset__step fieldset__step--current">Даты</li>
+                <li class="fieldset__step fieldset__step">Маршрут</li>
+                <li class="fieldset__step fieldset__step">Развлечения</li>
+              </ul>
+              <ul class="fieldset__base-info base-info">
+                <li class="base-info__item base-info__item--comp">
+                  <label class="base-info__label base-info__label--comp" for="companions">Ищу попутчиков:</label>
+                  <div class="base-info__wrapper">
+                    <input class="base-info__input" type="number" id="companions" name="companions" placeholder="2" value="2">
+                    <button class="base-info__button base-info__button--minus" type="button">
+                      <svg width="14" height="2">
+                        <use xlink:href="./img/sprite.svg#qty-minus"></use>
+                      </svg>
+                    </button>
+                    <button class="base-info__button base-info__button--plus" type="button">
+                      <svg width="14" height="14">
+                        <use xlink:href="./img/sprite.svg#qty-plus"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </li>
+                <li class="base-info__item base-info__item--days">
+                  <label class="base-info__label base-info__label--days" for="days">Длительность:</label>
+                  <div class="base-info__wrapper">
+                    <input class="base-info__input" type="number" id="days" name="days" placeholder="2" value="2">
+                    <button class="base-info__button base-info__button--minus" type="button">
+                      <svg width="14" height="2">
+                        <use xlink:href="./img/sprite.svg#qty-minus"></use>
+                      </svg>
+                    </button>
+                    <button class="base-info__button base-info__button--plus" type="button">
+                      <svg width="14" height="14">
+                        <use xlink:href="./img/sprite.svg#qty-plus"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </li>
+                <li class="base-info__item base-info__item--kids">
+                  <input class="visually-hidden base-info__checkbox" type="checkbox" id="kids" name="kids" checked="">
+                  <label class="base-info__label base-info__label--kids" for="kids">Можно с детьми</label>
+                </li>
+              </ul>
+              <div class="fieldset__calendar calendar">
+                <div class="calendar__block">
+                  <button class="calendar__button calendar__button--prev" type="button">
+                    <svg width="9" height="17">
+                      <use xlink:href="./img/sprite.svg#month-arrow-left"></use>
+                    </svg>
+                  </button>
+                  <p class="calendar__month">Март 2019</p>
+                  <button class="calendar__button calendar__button--next" type="button">
+                    <svg width="9" height="17">
+                      <use xlink:href="./img/sprite.svg#month-arrow-right"></use>
+                    </svg>
+                  </button>
+                </div>
+                <table class="calendar__table">
+                  <tr class="calendar__weekday">
+                    <td class="calendar__slot calendar__slot--disabled"><span>П</span>н</td>
+                    <td class="calendar__slot calendar__slot--disabled"><span>В</span>т</td>
+                    <td class="calendar__slot calendar__slot--disabled"><span>С</span>р</td>
+                    <td class="calendar__slot calendar__slot--disabled"><span>Ч</span>т</td>
+                    <td class="calendar__slot calendar__slot--disabled"><span>П</span>т</td>
+                    <td class="calendar__slot calendar__slot--disabled"><span>С</span>б</td>
+                    <td class="calendar__slot calendar__slot--disabled"><span>В</span>с</td>
+                  </tr>
+                  <tr class="calendar__day">
+                    <td class="calendar__slot calendar__slot--disabled"><a class="calendar__link" href="#">23</a></td>
+                    <td class="calendar__slot calendar__slot--disabled"><a class="calendar__link" href="#">24</a></td>
+                    <td class="calendar__slot calendar__slot--disabled"><a class="calendar__link" href="#">25</a></td>
+                    <td class="calendar__slot calendar__slot--disabled"><a class="calendar__link" href="#">26</a></td>
+                    <td class="calendar__slot calendar__slot--disabled"><a class="calendar__link" href="#">27</a></td>
+                    <td class="calendar__slot calendar__slot--disabled"><a class="calendar__link" href="#">28</a></td>
+                    <td class="calendar__slot calendar__slot--disabled calendar__slot--new-month"><a class="calendar__link" href="#">1<span> мар</span></a></td>
+                  </tr>
+                  <tr class="calendar__day">
+                    <td class="calendar__slot calendar__slot--disabled"><a class="calendar__link" href="#">2</a></td>
+                    <td class="calendar__slot calendar__slot--disabled"><a class="calendar__link" href="#">3</a></td>
+                    <td class="calendar__slot calendar__slot--disabled"><a class="calendar__link" href="#">4</a></td>
+                    <td class="calendar__slot calendar__slot--disabled"><a class="calendar__link" href="#">5</a></td>
+                    <td class="calendar__slot calendar__slot--disabled"><a class="calendar__link" href="#">6</a></td>
+                    <td class="calendar__slot calendar__slot--disabled"><a class="calendar__link" href="#">7</a></td>
+                    <td class="calendar__slot calendar__slot--disabled"><a class="calendar__link" href="#">8</a></td>
+                  </tr>
+                  <tr class="calendar__day">
+                    <td class="calendar__slot calendar__slot--disabled"><a class="calendar__link" href="#">9</a></td>
+                    <td class="calendar__slot calendar__slot--disabled"><a class="calendar__link" href="#">10</a></td>
+                    <td class="calendar__slot calendar__slot--disabled"><a class="calendar__link" href="#">11</a></td>
+                    <td class="calendar__slot calendar__slot--disabled"><a class="calendar__link" href="#">12</a></td>
+                    <td class="calendar__slot calendar__slot--disabled"><a class="calendar__link" href="#">13</a></td>
+                    <td class="calendar__slot calendar__slot--disabled"><a class="calendar__link" href="#">14</a></td>
+                    <td class="calendar__slot calendar__slot--disabled"><a class="calendar__link" href="#">15</a></td>
+                  </tr>
+                  <tr class="calendar__day">
+                    <td class="calendar__slot calendar__slot--disabled"><a class="calendar__link" href="#">16</a></td>
+                    <td class="calendar__slot calendar__slot--disabled"><a class="calendar__link" href="#">17</a></td>
+                    <td class="calendar__slot calendar__slot--disabled"><a class="calendar__link" href="#">18</a></td>
+                    <td class="calendar__slot calendar__slot--disabled"><a class="calendar__link" href="#">19</a></td>
+                    <td class="calendar__slot calendar__slot--disabled"><a class="calendar__link" href="#">20</a></td>
+                    <td class="calendar__slot calendar__slot--disabled"><a class="calendar__link" href="#">21</a></td>
+                    <td class="calendar__slot calendar__slot--disabled"><a class="calendar__link" href="#">22</a></td>
+                  </tr>
+                  <tr class="calendar__day">
+                    <td class="calendar__slot calendar__slot--disabled"><a class="calendar__link" href="#">23</a></td>
+                    <td class="calendar__slot calendar__slot--disabled"><a class="calendar__link" href="#">24</a></td>
+                    <td class="calendar__slot calendar__slot--disabled"><a class="calendar__link" href="#">25</a></td>
+                    <td class="calendar__slot calendar__slot--checked calendar__slot--in calendar__slot--hover"><a class="calendar__link" href="#">26</a></td>
+                    <td class="calendar__slot calendar__slot--checked"><a class="calendar__link" href="#">27</a></td>
+                    <td class="calendar__slot calendar__slot--checked calendar__slot--out"><a class="calendar__link" href="#">28</a></td>
+                    <td class="calendar__slot"><a class="calendar__link" href="#">29</a></td>
+                  </tr>
+                  <tr class="calendar__day">
+                    <td class="calendar__slot"><a class="calendar__link" href="#">30</a></td>
+                    <td class="calendar__slot"><a class="calendar__link" href="#">31</a></td>
+                    <td class="calendar__slot calendar__slot--new-month"><a class="calendar__link" href="#">1<span> апр</span></a></td>
+                    <td class="calendar__slot"><a class="calendar__link" href="#">2</a></td>
+                    <td class="calendar__slot"><a class="calendar__link" href="#">3</a></td>
+                    <td class="calendar__slot"><a class="calendar__link" href="#">4</a></td>
+                    <td class="calendar__slot"><a class="calendar__link" href="#">5</a></td>
+                  </tr>
+                </table>
+              </div>
+              <a href="#steptwo" class="button fieldset__next">Следующий шаг</a>
+            </fieldset>
+
+            <fieldset class="add-plan__fieldset fieldset fieldset--steptwo" id="steptwo">
+              <h2 class="fieldset__title">Шаг 2. <br>Маршрут</h2>
+              <p class="fieldset__text">Укажите страны, которые вы хотели посетить. <br>Это может быть одна или сразу несколько.</p>
+              <ul class="fieldset__steps">
+                <li class="fieldset__step fieldset__step">Даты</li>
+                <li class="fieldset__step fieldset__step--current">Маршрут</li>
+                <li class="fieldset__step fieldset__step">Развлечения</li>
+              </ul>
+              <ul class="fieldset__countries countries">
+                <li class="countries__item">
+                  <a class="countries__country" href="#"><span>Босния и Герцеговина</span></a>
+                  <svg class="countries__flag" width="35" height="24">
+                    <use xlink:href="./img/sprite.svg#flag-bosnia"></use>
+                  </svg>
+                  <button class="countries__remove" type="button">
+                    <svg width="9" height="9">
+                      <use xlink:href="./img/sprite.svg#close"></use>
+                    </svg>
+                  </button>
+                </li>
+                <li class="countries__item">
+                  <a class="countries__country" href="#"><span>Чехия</span></a>
+                  <svg class="countries__flag" width="35" height="24">
+                    <use xlink:href="./img/sprite.svg#flag-czech"></use>
+                  </svg>
+                  <button class="countries__remove" type="button">
+                    <svg width="9" height="9">
+                      <use xlink:href="./img/sprite.svg#close"></use>
+                    </svg>
+                  </button>
+                </li>
+                <li class="countries__item countries__item--new">
+                  <a class="countries__country" href="#">Выберите страну</a>
+                  <button class="countries__remove" type="button">
+                    <svg width="9" height="9">
+                      <use xlink:href="./img/sprite.svg#close"></use>
+                    </svg>
+                  </button>
+                  <div class="countries__list add-country">
+                    <a class="add-country__title" href="#">Выберите страну</a>
+                    <button class="add-country__close" type="button">
+                      <svg width="9" height="9">
+                        <use xlink:href="./img/sprite.svg#close"></use>
+                      </svg>
+                    </button>
+                    <div class="add-country__wrapper">
+                      <ul class="add-country__letters">
+                        <li class="add-country__letter add-country__letter--current"><a href="#">А</a></li>
+                        <li class="add-country__letter"><a href="#">Б</a></li>
+                        <li class="add-country__letter"><a href="#">В</a></li>
+                        <li class="add-country__letter"><a href="#">Г</a></li>
+                        <li class="add-country__letter"><a href="#">Д</a></li>
+                        <li class="add-country__letter"><a href="#">Е</a></li>
+                        <li class="add-country__letter"><a href="#">З</a></li>
+                        <li class="add-country__letter"><a href="#">И</a></li>
+                        <li class="add-country__letter"><a href="#">К</a></li>
+                        <li class="add-country__letter"><a href="#">Л</a></li>
+                        <li class="add-country__letter"><a href="#">М</a></li>
+                        <li class="add-country__letter"><a href="#">Н</a></li>
+                        <li class="add-country__letter"><a href="#">О</a></li>
+                        <li class="add-country__letter"><a href="#">П</a></li>
+                        <li class="add-country__letter"><a href="#">Р</a></li>
+                        <li class="add-country__letter"><a href="#">С</a></li>
+                        <li class="add-country__letter"><a href="#">Т</a></li>
+                        <li class="add-country__letter"><a href="#">У</a></li>
+                        <li class="add-country__letter"><a href="#">Ф</a></li>
+                        <li class="add-country__letter"><a href="#">Х</a></li>
+                        <li class="add-country__letter"><a href="#">Ч</a></li>
+                        <li class="add-country__letter"><a href="#">Ш</a></li>
+                        <li class="add-country__letter"><a href="#">Э</a></li>
+                        <li class="add-country__letter"><a href="#">Ю</a></li>
+                        <li class="add-country__letter"><a href="#">Я</a></li>
+                      </ul>
+                      <ul class="add-country__countries add-country__countries--a">
+                        <li class="add-country__country"><a href="#">Австралия</a></li>
+                        <li class="add-country__country"><a href="#">Австрия</a></li>
+                        <li class="add-country__country"><a href="#">Азербайджан</a></li>
+                        <li class="add-country__country"><a href="#">Албания</a></li>
+                        <li class="add-country__country"><a href="#">Алжир</a></li>
+                        <li class="add-country__country"><a href="#">Ангола</a></li>
+                        <li class="add-country__country"><a href="#">Андорра</a></li>
+                        <li class="add-country__country"><a href="#">Антигуа и Барбуда</a></li>
+                        <li class="add-country__country"><a href="#">Аргентина</a></li>
+                        <li class="add-country__country"><a href="#">Армения</a></li>
+                        <li class="add-country__country"><a href="#">Афганистан</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+                <li class="countries__item countries__item--add">
+                  <a class="countries__country" href="#">Добавить страну</a>
+                </li>
+              </ul>
+              <div class="fieldset__controls">
+                <a href="#stepthree" class="button fieldset__next">Следующий шаг</a>
+                <a href="#stepone" class="button fieldset__prev">На шаг назад</a>
+              </div>
+            </fieldset>
+
+            <fieldset class="add-plan__fieldset fieldset fieldset--stepthree" id="stepthree">
+              <h2 class="fieldset__title">Шаг 3. <br>Развлечения</h2>
+              <p class="fieldset__text">Наконец, расскажите о своих планах времяпровождения. <br>Можно писать в свободной форме и ставить тэги.</p>
+              <ul class="fieldset__steps">
+                <li class="fieldset__step fieldset__step">Даты</li>
+                <li class="fieldset__step fieldset__step">Маршрут</li>
+                <li class="fieldset__step fieldset__step--current">Развлечения</li>
+              </ul>
+              <ul class="fieldset__fun fun">
+                <li class="fun__item">
+                  <div class="fun__wrapper">
+                    <label class="fun__title" for="bosnia-fun"><span>Босния и Герцеговина</span></label>
+                    <svg class="fun__flag" width="35" height="24">
+                      <use xlink:href="./img/sprite.svg#flag-bosnia"></use>
+                    </svg>
+                  </div>
+                  <textarea class="fun__text" name="bosnia-fun" id="bosnia-fun" placeholder="План действий" required=""></textarea>
+                </li>
+                <li class="fun__item">
+                  <div class="fun__wrapper">
+                    <label class="fun__title" for="bosnia-fun"><span>Чехия</span></label>
+                    <svg class="fun__flag" width="35" height="24">
+                      <use xlink:href="./img/sprite.svg#flag-czech"></use>
+                    </svg>
+                  </div>
+                  <textarea class="fun__text" name="czech-fun" id="czech-fun" placeholder="План действий" required="">Пить пиво и лазить по&nbsp;старым&nbsp;замкам, наслаждаться архитектурой и вот это все.</textarea>
+                </li>
+              </ul>
+              <div class="fieldset__controls">
+                <button type="submit" class="button fieldset__submit">Отправить</button>
+                <a href="#steptwo" class="button fieldset__prev">На шаг назад</a>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="page-footer">
+      <div class="page-footer__wrapper">
+        <a href="index.html" class="page-footer__logo">
+          <picture>
+            <source type="image/webp" srcset="./img/logo-desktop-blue@1x.webp 1x, ./img/logo-desktop-blue@2x.webp 2x" media="(min-width: 1440px)">
+            <source type="image/webp" srcset="./img/logo-tablet-blue@1x.webp 1x, ./img/logo-tablet-blue@2x.webp 2x" media="(min-width: 768px)">
+            <source type="image/webp" srcset="./img/logo-mobile-blue@1x.webp 1x, ./img/logo-mobile-blue@2x.webp 2x">
+
+            <source srcset="./img/logo-desktop-blue@1x.png 1x, ./img/logo-desktop-blue@2x.png 2x" media="(min-width: 1440px)">
+            <source srcset="./img/logo-tablet-blue@1x.png 1x, ./img/logo-tablet-blue@2x.png 2x" media="(min-width: 768px)">
+            <img src="./img/logo-mobile-blue@1x.png" srcset="./img/logo-mobile-blue@2x.png 2x" width="96" height="15" alt="Погнали!">
+          </picture>
+        </a>
+        <ul class="page-footer__social social social--footer">
+          <li class="social__item">
+            <a class="social__link" href="https://facebook.com" target="_blank" aria-label="Мы на Фейсбуке">
+              <svg class="social__img social__img--fb" width="11" height="21">
+                <use xlink:href="./img/sprite.svg#facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" href="https://vk.com" target="_blank" aria-label="Мы Вконтакте">
+              <svg class="social__img social__img--vk" width="23" height="12">
+                <use xlink:href="./img/sprite.svg#vk"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" href="https://instagram.com" target="_blank" aria-label="Мы в Инстаграме">
+              <svg class="social__img social__img--insta" width="18" height="18">
+                <use xlink:href="./img/sprite.svg#instagram"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+        <a href="https://htmlacademy.ru/intensive/adaptive" target="_blank" class="page-footer__copyright">
+          <p>Разработано</p>
+          <svg width="27" height="34">
+            <use xlink:href="./img/sprite.svg#htmlacademy"></use>
+          </svg>
+        </a>
+      </div>
+    </footer>
+
+    <script src="./js/picturefill-min.js"></script>
+    <script src="./js/svgxuse.js"></script>
+    <script src="./js/menu.js"></script>
+    <script src="./js/profile-transport.js"></script>
+    <script src="./js/add-country.js"></script>
+  </body>
+</html>
